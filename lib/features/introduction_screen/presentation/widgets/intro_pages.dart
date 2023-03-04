@@ -4,37 +4,46 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 List<PageViewModel> pages = [
   PageViewModel(
-    title: "BMI Calculator",
+    title: "QuoteGen",
     body:
-        "Simple and intuitive interface for calculating BMI with sliders to adjust height and weight with dynamic display of BMI and interpretation of what the value means.",
+        "Introducing \"QuoteGen\" - a mobile app that helps you generate a random quote from a wide variety of categories, save your favorite quotes, and receive daily notifications to inspire and motivate you!",
     image: Image.asset(
-      'assets/images/bmi.png',
+      'assets/images/reading.png',
       height: 55.sp,
     ),
   ),
   PageViewModel(
-    title: "Weight History",
+    title: "Category",
     body:
-        "You can save your BMI data to see how it changes over time, and view it as a list or graph to help you understand your progress.",
+        "Select a category that resonates with you, such as love, success, happiness, or friendship, and the app will generate a random quote for you within that category.",
     image: Image.asset(
-      'assets/images/history.png',
+      'assets/images/book.png',
       height: 55.sp,
     ),
   ),
   PageViewModel(
-    title: "Graph",
-    body: "View your BMI over time with our unique graph.",
+    title: "Saving",
+    body:
+        "With a simple click of a button, you can add a quote to your favorites list and easily access it later when you need a dose of inspiration or motivation.",
     image: Image.asset(
-      'assets/images/graph.png',
+      'assets/images/save.png',
+      height: 55.sp,
+    ),
+  ),
+  PageViewModel(
+    title: "Notification",
+    body:
+        "You can turn on daily notifications and receive a new quote every day to start your day off right. You can even choose what time of day you want to receive the notification to make sure it fits your schedule perfectly.",
+    image: Image.asset(
+      'assets/images/notification.png',
       height: 55.sp,
     ),
   ),
   PageViewModel(
     title: "Settings",
-    body:
-        "Switch between lbs and kg, and centimeters and feet to match your personal preference. Additionally, choose between dark and light mode for optimal viewing experience",
+    body: "Choose between dark and light mode for optimal viewing experience",
     image: Image.asset(
-      'assets/images/settings.png',
+      'assets/images/matter.png',
       height: 55.sp,
     ),
   )
