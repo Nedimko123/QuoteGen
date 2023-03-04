@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:random_quote/features/history/presentation/widgets/empty_history.dart';
 import 'package:random_quote/features/history/presentation/widgets/sheets/delete_quote.dart';
 
-import 'package:random_quote/quotes_repisotory/quote_model.dart';
+import 'package:random_quote/quotes_repisotory/models/quote_model.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SavedQuotesList extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:random_quote/features/homepage/data/const/shared_preferences_keys.dart';
-import 'package:random_quote/quotes_repisotory/quote_model.dart';
+import 'package:random_quote/quotes_repisotory/models/quote_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<List<QuoteModel>> loadData() async {

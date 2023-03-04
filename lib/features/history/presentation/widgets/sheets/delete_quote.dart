@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:random_quote/features/common/presentation/layout_design/expanded_row.dart';
 import 'package:random_quote/features/common/sheets/wrap_sheet.dart';
 import 'package:random_quote/features/history/domain/functions/delete_from_db.dart';
-import 'package:random_quote/quotes_repisotory/quote_model.dart';
+import 'package:random_quote/quotes_repisotory/models/quote_model.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class DeleteTransactionSheet extends ConsumerWidget {
