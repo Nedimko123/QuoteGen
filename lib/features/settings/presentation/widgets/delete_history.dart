@@ -20,7 +20,7 @@ class DeleteHistory extends ConsumerWidget {
                     BorderRadius.vertical(top: Radius.circular(20.sp))),
             builder: (context) => const DeleteHistorySheet()),
         child: Text(
-          'Delete history',
+          'Delete saved quotes',
           style: TextStyle(fontSize: 16.sp, color: Colors.red),
         ),
       ),

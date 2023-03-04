@@ -1,14 +1,14 @@
 import 'dart:convert';
 
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:random_quote/features/homepage/data/const/shared_preferences_keys.dart';
-import 'package:random_quote/features/homepage/domain/models/bmi_model.dart';
+import 'package:random_quote/quotes_repisotory/quote_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-Future<List<BMIModel>> loadData() async {
+Future<List<QuoteModel>> loadData() async {
   final SharedPreferences sharedPreferences =
       await SharedPreferences.getInstance();
   final String transactions =
-      sharedPreferences.getString(sharedPreferencesBMIHistoryKey) ?? '[]';
+      sharedPreferences.getString(sharedPreferencesSavedQuotesKey) ?? '[]';
   List<dynamic> transactionList = jsonDecode(transactions);
-  return transactionList.map((e) => BMIModel.fromJson(e)).toList();
+  return transactionList.map((e) => QuoteModel.fromJson(e)).toList();
 }

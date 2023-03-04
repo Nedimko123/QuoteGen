@@ -1,4 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:random_quote/quotes_repisotory/quote_model.dart';
 
-final heightProvider = StateProvider<double>((ref) => 1);
-final weightProvider = StateProvider<double>((ref) => 1);
+final randomQuoteProvider = StateProvider<QuoteModel?>((ref) => null);

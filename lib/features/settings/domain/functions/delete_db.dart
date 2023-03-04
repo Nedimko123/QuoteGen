@@ -7,9 +7,9 @@ import 'package:random_quote/features/homepage/data/const/shared_preferences_key
 Future<void> deleteDatabase(WidgetRef ref) async {
   await SharedPreferences.getInstance()
       .then((SharedPreferences sharedPreferences) {
-    sharedPreferences.setString(sharedPreferencesBMIHistoryKey, '[]');
+    sharedPreferences.setString(sharedPreferencesSavedQuotesKey, '[]');
   }).whenComplete(() {
-    successToast('History deleted');
+    successToast('Quotes deleted');
     return ref.refresh(transactionHistoryProvider);
   });
 }

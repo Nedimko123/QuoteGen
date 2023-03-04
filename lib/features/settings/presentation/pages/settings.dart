@@ -1,4 +1,3 @@
-import 'package:random_quote/features/settings/presentation/widgets/american_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -25,7 +24,6 @@ class Settings extends ConsumerWidget {
               Column(
                 children: const [
                   ThemeModeSwitch(),
-                  AmericanModeSwitch(),
                 ],
               ),
               const DeleteHistory(),
