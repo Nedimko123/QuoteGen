@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:random_quote/quotes_repisotory/quotes.dart';
+import 'package:random_quote/quotes_repisotory/quote_categories.dart';
 
 part 'quote_model.freezed.dart';
 part 'quote_model.g.dart';
