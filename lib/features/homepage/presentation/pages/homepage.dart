@@ -27,9 +27,8 @@ class QuoteGen extends ConsumerWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 20.h),
                 child: Text(
-                  'Press generate to generate a  random quote',
-                  style: TextStyle(
-                      color: Theme.of(context).primaryColor, fontSize: 16.sp),
+                  'Press generate to generate a random quote',
+                  style: TextStyle(fontSize: 16.sp),
                 ),
               ),
             if (randomQuote.state != null)

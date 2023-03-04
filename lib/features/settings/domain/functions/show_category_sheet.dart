@@ -5,9 +5,14 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 void showCategorySheet(BuildContext context) {
   showModalBottomSheet(
       isScrollControlled: true,
-      elevation: 10,
+      // backgroundColor: Colors.transparent,
+      clipBehavior: Clip.antiAliasWithSaveLayer,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(20.sp))),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(28.sp))),
       context: context,
-      builder: (context) => const QuoteCategorySheet());
+      builder: (context) => DraggableScrollableSheet(
+          expand: false,
+          builder: ((context, scrollController) => QuoteCategorySheet(
+                scrollController: scrollController,
+              ))));
 }

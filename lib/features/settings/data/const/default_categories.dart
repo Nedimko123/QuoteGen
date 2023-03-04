@@ -4,3 +4,8 @@ import 'package:random_quote/quotes_repisotory/quote_categories.dart';
 final List<QuoteCategoryModel> defaultCategories = QuoteCategory.values
     .map((e) => QuoteCategoryModel(name: e.value, isActive: true))
     .toList();
+
+final List<QuoteCategoryModel> defaultUnselectedCategories = QuoteCategory
+    .values
+    .map((e) => QuoteCategoryModel(name: e.value, isActive: false))
+    .toList();
