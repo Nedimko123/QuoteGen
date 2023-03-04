@@ -9,15 +9,15 @@ part of 'quote_model.dart';
 _$_QuoteModel _$$_QuoteModelFromJson(Map<String, dynamic> json) =>
     _$_QuoteModel(
       author: json['author'] as String,
-      text: json['text'] as String,
-      quoteCategory: $enumDecode(_$QuoteCategoryEnumMap, json['quoteCategory']),
+      quote: json['quote'] as String,
+      genre: $enumDecode(_$QuoteCategoryEnumMap, json['genre']),
     );
 
 Map<String, dynamic> _$$_QuoteModelToJson(_$_QuoteModel instance) =>
     <String, dynamic>{
       'author': instance.author,
-      'text': instance.text,
-      'quoteCategory': _$QuoteCategoryEnumMap[instance.quoteCategory]!,
+      'quote': instance.quote,
+      'genre': _$QuoteCategoryEnumMap[instance.genre]!,
     };
 
 const _$QuoteCategoryEnumMap = {

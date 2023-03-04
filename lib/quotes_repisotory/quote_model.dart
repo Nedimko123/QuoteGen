@@ -8,8 +8,8 @@ part 'quote_model.g.dart';
 class QuoteModel with _$QuoteModel {
   const factory QuoteModel({
     required String author,
-    required String text,
-    required QuoteCategory quoteCategory,
+    required String quote,
+    required QuoteCategory genre,
   }) = _QuoteModel;
 
   factory QuoteModel.fromJson(Map<String, dynamic> json) =>

@@ -21,8 +21,8 @@ QuoteModel _$QuoteModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$QuoteModel {
   String get author => throw _privateConstructorUsedError;
-  String get text => throw _privateConstructorUsedError;
-  QuoteCategory get quoteCategory => throw _privateConstructorUsedError;
+  String get quote => throw _privateConstructorUsedError;
+  QuoteCategory get genre => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +36,7 @@ abstract class $QuoteModelCopyWith<$Res> {
           QuoteModel value, $Res Function(QuoteModel) then) =
       _$QuoteModelCopyWithImpl<$Res, QuoteModel>;
   @useResult
-  $Res call({String author, String text, QuoteCategory quoteCategory});
+  $Res call({String author, String quote, QuoteCategory genre});
 }
 
 /// @nodoc
@@ -53,21 +53,21 @@ class _$QuoteModelCopyWithImpl<$Res, $Val extends QuoteModel>
   @override
   $Res call({
     Object? author = null,
-    Object? text = null,
-    Object? quoteCategory = null,
+    Object? quote = null,
+    Object? genre = null,
   }) {
     return _then(_value.copyWith(
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
+      quote: null == quote
+          ? _value.quote
+          : quote // ignore: cast_nullable_to_non_nullable
               as String,
-      quoteCategory: null == quoteCategory
-          ? _value.quoteCategory
-          : quoteCategory // ignore: cast_nullable_to_non_nullable
+      genre: null == genre
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
               as QuoteCategory,
     ) as $Val);
   }
@@ -81,7 +81,7 @@ abstract class _$$_QuoteModelCopyWith<$Res>
       __$$_QuoteModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String author, String text, QuoteCategory quoteCategory});
+  $Res call({String author, String quote, QuoteCategory genre});
 }
 
 /// @nodoc
@@ -96,21 +96,21 @@ class __$$_QuoteModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? author = null,
-    Object? text = null,
-    Object? quoteCategory = null,
+    Object? quote = null,
+    Object? genre = null,
   }) {
     return _then(_$_QuoteModel(
       author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
+      quote: null == quote
+          ? _value.quote
+          : quote // ignore: cast_nullable_to_non_nullable
               as String,
-      quoteCategory: null == quoteCategory
-          ? _value.quoteCategory
-          : quoteCategory // ignore: cast_nullable_to_non_nullable
+      genre: null == genre
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
               as QuoteCategory,
     ));
   }
@@ -120,7 +120,7 @@ class __$$_QuoteModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QuoteModel implements _QuoteModel {
   const _$_QuoteModel(
-      {required this.author, required this.text, required this.quoteCategory});
+      {required this.author, required this.quote, required this.genre});
 
   factory _$_QuoteModel.fromJson(Map<String, dynamic> json) =>
       _$$_QuoteModelFromJson(json);
@@ -128,13 +128,13 @@ class _$_QuoteModel implements _QuoteModel {
   @override
   final String author;
   @override
-  final String text;
+  final String quote;
   @override
-  final QuoteCategory quoteCategory;
+  final QuoteCategory genre;
 
   @override
   String toString() {
-    return 'QuoteModel(author: $author, text: $text, quoteCategory: $quoteCategory)';
+    return 'QuoteModel(author: $author, quote: $quote, genre: $genre)';
   }
 
   @override
@@ -143,14 +143,13 @@ class _$_QuoteModel implements _QuoteModel {
         (other.runtimeType == runtimeType &&
             other is _$_QuoteModel &&
             (identical(other.author, author) || other.author == author) &&
-            (identical(other.text, text) || other.text == text) &&
-            (identical(other.quoteCategory, quoteCategory) ||
-                other.quoteCategory == quoteCategory));
+            (identical(other.quote, quote) || other.quote == quote) &&
+            (identical(other.genre, genre) || other.genre == genre));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, author, text, quoteCategory);
+  int get hashCode => Object.hash(runtimeType, author, quote, genre);
 
   @JsonKey(ignore: true)
   @override
@@ -169,8 +168,8 @@ class _$_QuoteModel implements _QuoteModel {
 abstract class _QuoteModel implements QuoteModel {
   const factory _QuoteModel(
       {required final String author,
-      required final String text,
-      required final QuoteCategory quoteCategory}) = _$_QuoteModel;
+      required final String quote,
+      required final QuoteCategory genre}) = _$_QuoteModel;
 
   factory _QuoteModel.fromJson(Map<String, dynamic> json) =
       _$_QuoteModel.fromJson;
@@ -178,9 +177,9 @@ abstract class _QuoteModel implements QuoteModel {
   @override
   String get author;
   @override
-  String get text;
+  String get quote;
   @override
-  QuoteCategory get quoteCategory;
+  QuoteCategory get genre;
   @override
   @JsonKey(ignore: true)
   _$$_QuoteModelCopyWith<_$_QuoteModel> get copyWith =>
