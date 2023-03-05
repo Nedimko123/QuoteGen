@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:random_quote/features/common/presentation/layout_design/expanded_row.dart';
 import 'package:random_quote/features/common/presentation/layout_design/sliver_scaffold.dart';
-import 'package:random_quote/features/homepage/domain/functions/generate_random_quote.dart';
 import 'package:random_quote/features/homepage/domain/functions/save_to_db.dart';
+import 'package:random_quote/features/homepage/domain/functions/show_random_quote.dart';
 import 'package:random_quote/features/homepage/domain/providers.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -87,7 +87,7 @@ class QuoteGen extends ConsumerWidget {
               height: 10.h,
             ),
             InkWell(
-              onTap: () => generateRandomQuote(ref),
+              onTap: () => showRandomQuote(ref),
               child: Container(
                 width: 40.w,
                 padding: EdgeInsets.all(15.sp),
