@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:random_quote/features/common/presentation/layout_design/expanded_row.dart';
 import 'package:random_quote/features/common/presentation/layout_design/sliver_scaffold.dart';
+import 'package:random_quote/features/settings/domain/functions/activate_quote_notifications.dart';
 import 'package:random_quote/features/settings/domain/functions/set_quote_notification_time.dart';
 import 'package:random_quote/features/settings/domain/models/quote_notification_time.dart';
 import 'package:random_quote/features/settings/domain/providers.dart';
@@ -18,8 +19,8 @@ class QuoteNotificationSheet extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    int hours = DateTime.now().hour;
-    int minutes = DateTime.now().minute;
+    final hours = ref.watch(quoteHoursProvider.state);
+    final minutes = ref.watch(quoteMinutesProvider.state);
     return CustomScrollView(
         physics: bouncyAlwaysScrollablePsyhics,
         controller: scrollController,
@@ -53,13 +54,13 @@ class QuoteNotificationSheet extends ConsumerWidget {
                       color: Theme.of(context).focusColor,
                       borderRadius: BorderRadius.all(Radius.circular(15.sp))),
                   child: TimePickerWithoutSeconds(
-                    initialHours: hours,
-                    initialMinutes: minutes,
+                    initialHours: hours.state,
+                    initialMinutes: minutes.state,
                     onSelectedItemChangedHours: (p0) {
-                      hours = p0;
+                      hours.update((state) => p0);
                     },
                     onSelectedItemChangedMinutes: (p0) {
-                      minutes = p0;
+                      minutes.update((state) => p0);
                     },
                   ),
                 ),
@@ -88,7 +89,10 @@ class QuoteNotificationSheet extends ConsumerWidget {
                       ),
                       InkWell(
                         onTap: () async => await setQuoteNotificationTime(
-                                QuoteTimeModel(hours: hours, minutes: minutes))
+                                QuoteTimeModel(
+                                    hours: hours.state, minutes: minutes.state))
+                            .whenComplete(
+                                () async => await activateQuoteNotifications())
                             .whenComplete(() => ref
                                 .invalidate(isQuoteNotificationActiveProvider))
                             .whenComplete(() => Navigator.of(context).pop()),

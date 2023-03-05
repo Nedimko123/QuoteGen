@@ -28,11 +28,15 @@ class QuoteNotifications extends ConsumerWidget {
               ),
             );
           }
+          final String formattedHours =
+              isQuoteNotificationActive.hours.toString().padLeft(2, '0');
+          final String formattedMinutes =
+              isQuoteNotificationActive.minutes.toString().padLeft(2, '0');
           return ExpandedRow(
             flexChildrenRatio: const [3, 1],
             children: [
               Text(
-                'Quotes activated at: ${isQuoteNotificationActive.hours}:${isQuoteNotificationActive.minutes}',
+                'Quotes activated at: $formattedHours:$formattedMinutes',
                 style: TextStyle(
                   fontSize: 16.sp,
                   color: Colors.green,

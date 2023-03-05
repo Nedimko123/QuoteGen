@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future<QuoteTimeModel?> getQuoteNotificationTime() async {
   final SharedPreferences sharedPreferences =
       await SharedPreferences.getInstance();
+  await sharedPreferences.reload();
 
   final String? stringTime =
       sharedPreferences.getString(sharedPreferencesQuoteTimeKey);

@@ -11,3 +11,10 @@ final quoteCategoriesProvider =
 
 final isQuoteNotificationActiveProvider =
     FutureProvider<QuoteTimeModel?>((ref) => getQuoteNotificationTime());
+
+final quoteHoursProvider = StateProvider.autoDispose<int>(
+  (ref) => DateTime.now().hour,
+);
+final quoteMinutesProvider = StateProvider.autoDispose<int>(
+  (ref) => DateTime.now().minute,
+);
