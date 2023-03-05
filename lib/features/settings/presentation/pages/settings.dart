@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:random_quote/features/settings/domain/functions/show_category_sheet.dart';
+import 'package:random_quote/features/settings/presentation/widgets/quote_notifications.dart';
 import 'package:random_quote/features/settings/presentation/widgets/sheets/select_quote_categories.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:random_quote/features/common/presentation/layout_design/sliver_scaffold.dart';
@@ -36,7 +37,11 @@ class Settings extends ConsumerWidget {
                         color: Theme.of(context).hintColor,
                       ),
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 1.h,
+                  ),
+                  const QuoteNotifications(),
                 ],
               ),
               const DeleteHistory(),

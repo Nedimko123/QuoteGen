@@ -1,11 +1,14 @@
-import 'package:random_quote/features/settings/domain/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:random_quote/features/notifications/functions/init.dart';
+import 'package:random_quote/features/settings/domain/providers.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'features/introduction_screen/presentation/pages/intro_main.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initNotifications();
   runApp(const ProviderScope(child: MyApp()));
 }
 

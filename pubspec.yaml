@@ -39,11 +39,14 @@ dependencies:
   responsive_sizer: ^3.1.1
   freezed_annotation: ^2.0.1  
   json_annotation: ^4.7.0
-  intl: ^0.18.0
+  intl: ^0.17.0
   fluttertoast: ^8.2.1
   icons_launcher: ^2.1.0
   flutter_native_splash: ^2.2.18
   fl_chart: ^0.55.2
+  workmanager: ^0.5.1
+  awesome_notifications: ^0.6.21
+
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +71,30 @@ flutter:
     - assets/images/
     - assets/logos/
     
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/logos/quote.png
+  branding: assets/logos/quote.png
+  color_dark: "#121212"
+  image_dark: assets/logos/quote.png
+  branding_dark: assets/logos/quote.png
+
+  android_12:
+    image: assets/logos/quote.png
+    icon_background_color: "#ffffff"
+    image_dark: assets/logos/quote.png
+    icon_background_color_dark: "#121212"
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+icons_launcher:
+  image_path: "assets/logos/quote.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
